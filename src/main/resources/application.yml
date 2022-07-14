@@ -1,0 +1,19 @@
+server:
+  port: 80 #端口号，默认是8080
+  servlet:
+    context-path: / #上下文路径，默认是/
+#连接数据库的四个必要参数，其他数据源参数有默认值
+spring:
+  datasource:
+    username: root
+    password: 134415
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///pethome?useUnicode=true&characterEncoding=utf8
+#配置别名 和扫描mapper文件【约定大于配置】
+mybatis:
+  type-aliases-package: cn.hx.org.domain,cn.hx.org.query,
+                        cn.hx.user.domain,cn.hx.user.query
+#配置日志等级
+logging:
+  level:
+    cn.hx: trace
